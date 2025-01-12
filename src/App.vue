@@ -90,10 +90,12 @@ const clearAll = () => {
 };
 
 const equals = () => {
-  calculate();
-  operator.value = '';
-  buffer = '';
-  isPointed.value = false;
+  if (buffer.length > 0 && operator.value.length > 0) {
+    calculate();
+    operator.value = '';
+    buffer = '';
+    isPointed.value = false;
+  }
 };
 
 const copyMessage = ref('');
