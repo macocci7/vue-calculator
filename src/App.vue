@@ -90,10 +90,12 @@ const clearAll = () => {
 };
 
 const equals = () => {
-  calculate();
-  operator.value = '';
-  buffer = '';
-  isPointed.value = false;
+  if (buffer.length > 0 && operator.value.length > 0) {
+    calculate();
+    operator.value = '';
+    buffer = '';
+    isPointed.value = false;
+  }
 };
 
 const copyMessage = ref('');
@@ -110,6 +112,14 @@ const copyScreen = () => {
     }
   );
 };
+
+const canCopy = () => {
+  copyMessage.value = 'C L I C K - TO - C O P Y 😊';
+};
+
+const cannotCopy = () => {
+  copyMessage.value = '';
+};
 </script>
 
 <template>
@@ -119,7 +129,7 @@ const copyScreen = () => {
         <p class="copy-message">{{ copyMessage }}</p>
         <p class="operator">{{ operator }}</p>
       </div>
-      <p class="digits" @click="copyScreen">{{ screenValue }}</p>
+      <p class="digits" @click="copyScreen" @mouseover="canCopy" @mouseout="cannotCopy">{{ screenValue }}</p>
     </div>
     <button class="function" @click="clearAll">AC</button>
     <button class="operator" @click="switchSign()">+/-</button>
