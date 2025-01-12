@@ -4,6 +4,8 @@ A simple toy-like calculator on your browser.
 
 A demo project.
 
+[Demo Page](https://macocci7.github.io/vue-calculator/)
+
 <img src="src/assets/vue-calculator.png" width="250" height="390" />
 
 ## Usage
