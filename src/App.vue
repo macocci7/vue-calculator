@@ -131,26 +131,26 @@ const cannotCopy = () => {
       </div>
       <p class="digits" @click="copyScreen" @mouseover="canCopy" @mouseout="cannotCopy">{{ screenValue }}</p>
     </div>
-    <button class="function" @click="clearAll">AC</button>
-    <button class="operator" @click="switchSign()">+/-</button>
-    <button class="operator" @click="setOperator('％')">%</button>
-    <button class="operator" @click="setOperator('÷')">÷</button><br>
-    <button class="number" @click="inputNumber('7')">7</button>
-    <button class="number" @click="inputNumber('8')">8</button>
-    <button class="number" @click="inputNumber('9')">9</button>
-    <button class="operator" @click="setOperator('×')">×</button><br>
-    <button class="number" @click="inputNumber('4')">4</button>
-    <button class="number" @click="inputNumber('5')">5</button>
-    <button class="number" @click="inputNumber('6')">6</button>
-    <button class="operator" @click="setOperator('－')">－</button><br>
-    <button class="number" @click="inputNumber('1')">1</button>
-    <button class="number" @click="inputNumber('2')">2</button>
-    <button class="number" @click="inputNumber('3')">3</button>
-    <button class="operator" @click="setOperator('＋')">＋</button><br>
-    <button class="number" @click="inputNumber('0')">0</button>
-    <button class="number" @click="inputNumber('00')">00</button> 
-    <button class="number" @click="appendPoint()">.</button>
-    <button class="operator" @click="equals()">＝</button>
+    <button class="function b-ac" @click="clearAll">AC</button>
+    <button class="operator b-ss" @click="switchSign()">+/-</button>
+    <button class="operator b-mod" @click="setOperator('％')">%</button>
+    <button class="operator b-div" @click="setOperator('÷')">÷</button><br>
+    <button class="number b-7" @click="inputNumber('7')">7</button>
+    <button class="number b-8" @click="inputNumber('8')">8</button>
+    <button class="number b-9" @click="inputNumber('9')">9</button>
+    <button class="operator b-mul" @click="setOperator('×')">×</button><br>
+    <button class="number b-4" @click="inputNumber('4')">4</button>
+    <button class="number b-5" @click="inputNumber('5')">5</button>
+    <button class="number b-6" @click="inputNumber('6')">6</button>
+    <button class="operator b-sub" @click="setOperator('－')">－</button><br>
+    <button class="number b-1" @click="inputNumber('1')">1</button>
+    <button class="number b-2" @click="inputNumber('2')">2</button>
+    <button class="number b-3" @click="inputNumber('3')">3</button>
+    <button class="operator b-add" @click="setOperator('＋')">＋</button><br>
+    <button class="number b-0" @click="inputNumber('0')">0</button>
+    <button class="number b-00" @click="inputNumber('00')">00</button> 
+    <button class="number b-dot" @click="appendPoint()">.</button>
+    <button class="operator b-eq" @click="equals()">＝</button>
   </div>
 </template>
 

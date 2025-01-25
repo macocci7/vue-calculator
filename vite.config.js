@@ -15,5 +15,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  base: '/vue-calculator/'
+  base: '/vue-calculator/',
+  test: {
+    globals: true,
+    environment: 'happy-dom'
+  }
 })
