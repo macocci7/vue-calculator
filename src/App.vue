@@ -3,7 +3,7 @@ import {ref} from 'vue';
 
 var value = 0;
 var buffer = '';
-const screenValue = ref(value);
+const screenValue = ref(value.toString());
 const limitNumberOfDigits = 12;
 const operator = ref('');
 const isError = ref(false);
