@@ -314,10 +314,12 @@ describe("App.vue", () => {
         expect(wrapper.find(".subscreen").text()).toBe("C L I C K - TO - C O P Y 😊");
     });
 
-    test("Click on the screen causes digits copied to the clip board", async () => {
-        const wrapper = shallowMount(App, {});
-        expect(wrapper.find(".subscreen").text()).toBe("");
-        await wrapper.find(".digits").trigger("click");
-        expect(wrapper.find(".subscreen").text()).toBe("C O P I E D ❤");
-    });
+    if (navigator.clipboard) {
+        it("Click on the screen causes digits copied to the clip board", async () => {
+            const wrapper = shallowMount(App, {});
+            expect(wrapper.find(".subscreen").text()).toBe("");
+            await wrapper.find(".digits").trigger("click");
+            expect(wrapper.find(".subscreen").text()).toBe("C O P I E D ❤");
+        });
+    }
 });
