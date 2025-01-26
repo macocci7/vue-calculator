@@ -233,6 +233,7 @@ button {
   margin-top: 20px;
   font-weight: bold;
   font-size: 16px;
+  text-align: center;
 }
 
 button.number {
