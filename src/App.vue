@@ -234,6 +234,13 @@ button {
   font-weight: bold;
   font-size: 16px;
   text-align: center;
+  position: relative;
+}
+
+button > * {
+  position: absolute;
+  inset: 50%;
+  translate: -50% -50%;
 }
 
 button.number {
