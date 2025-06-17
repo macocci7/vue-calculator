@@ -1,6 +1,6 @@
 {
   "name": "vue-calculator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,14 +10,14 @@
     "test": "vitest"
   },
   "dependencies": {
-    "vue": "^3.5.13"
+    "vue": "^3.5.16"
   },
   "devDependencies": {
     "@testing-library/vue": "^8.1.0",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "happy-dom": "^16.7.2",
-    "vite": "^6.0.5",
-    "vite-plugin-vue-devtools": "^7.6.8",
-    "vitest": "^3.0.5"
+    "@vitejs/plugin-vue": "^5.2.4",
+    "happy-dom": "^18.0.1",
+    "vite": "^6.3.5",
+    "vite-plugin-vue-devtools": "^7.7.7",
+    "vitest": "^3.2.3"
   }
 }
